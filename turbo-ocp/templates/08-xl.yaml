@@ -24,6 +24,6 @@ spec:
       size: {{.Values.metadata.db_persistence_size}}
   {{- end }}
   instana:
-    enabled: true
+    enabled: {{.Values.metadata.instana}}
   kubeturbo:
-    enabled: true
+    enabled: {{.Values.metadata.kubeturbo}}

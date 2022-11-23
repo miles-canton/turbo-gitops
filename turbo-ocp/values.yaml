@@ -10,5 +10,7 @@ metadata:
   tag: 8.7.1
   storageClassName: ""
   # you can set the storageclass ,eg: ocs-storagecluster-cephfs
-  db_persistence_size: 50Gi
+  db_persistence_size: 10Gi
+  instana: true
+  kubeturbo: false
   
