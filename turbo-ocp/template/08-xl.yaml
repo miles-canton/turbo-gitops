@@ -5,7 +5,9 @@ metadata:
   namespace: {{.Values.metadata.turbo_namespace}}
 spec:
   global:
+    {{- if .Values.metadata.storageClassName }}
     storageClassName: {{.Values.metadata.storageClassName}}
+    {{- end }}
     customImageNames: false
     repository: registry.connect.redhat.com/turbonomic
     tag: {{.Values.metadata.tag}}
@@ -16,9 +18,11 @@ spec:
     enabled: false
   openshiftingress:
     enabled: true
+ {{- if .Values.metadata.db_persistence_size }}
   db:
     persistence:
-      size: 50Gi
+      size: {{.Values.metadata.db_persistence_size}}
+  {{- end }}
   instana:
     enabled: true
   kubeturbo:
