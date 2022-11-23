@@ -3,6 +3,8 @@ kind: OperatorGroup
 metadata:
   name: turbonomic-mkk5d
   namespace: {{.Values.metadata.turbo_namespace}}
+  annotations:
+    argocd.argoproj.io/sync-wave: "6"
 spec:
   targetNamespaces:
   - {{.Values.metadata.turbo_namespace}}

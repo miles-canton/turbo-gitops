@@ -2,6 +2,8 @@ kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: t8c-operator
+  annotations:
+    argocd.argoproj.io/sync-wave: "5"
 subjects:
 - kind: ServiceAccount
   name: t8c-operator
@@ -15,7 +17,7 @@ kind: RoleBinding
 metadata:
   name: gitops-controller-clusterrole-binding
   annotations:
-    argocd.argoproj.io/sync-wave: "100"
+    argocd.argoproj.io/sync-wave: "5"
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
@@ -31,7 +33,7 @@ metadata:
   name: system:openshift:scc:anyuid
   namespace: {{.Values.metadata.turbo_namespace}}
   annotations:
-    argocd.argoproj.io/sync-wave: "100"
+    argocd.argoproj.io/sync-wave: "5"
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
@@ -47,7 +49,7 @@ metadata:
   name: system:openshift:scc:privileged
   namespace: {{.Values.metadata.turbo_namespace}}
   annotations:
-    argocd.argoproj.io/sync-wave: "100"
+    argocd.argoproj.io/sync-wave: "5"
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole

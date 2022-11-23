@@ -3,7 +3,8 @@ kind: Xl
 metadata:
   name: xl-release
   namespace: {{.Values.metadata.turbo_namespace}}
-
+  annotations:
+    argocd.argoproj.io/sync-wave: "100"
 spec:
   global:
     {{- if .Values.metadata.storageClassName }}
