@@ -2,6 +2,8 @@ apiVersion: charts.helm.k8s.io/v1
 kind: Xl
 metadata:
   name: xl-release
+  annotations:
+    argocd.argoproj.io/sync-wave: "100"
 spec:
   # Default values copied from <project_dir>/helm-charts/xl/values.yaml
 
