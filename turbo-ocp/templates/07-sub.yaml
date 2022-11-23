@@ -8,4 +8,4 @@ spec:
   installPlanApproval: Automatic
   name: t8c-certified
   source: certified-operators
-  #sourceNamespace: openshift-marketplace
+  sourceNamespace: {{.Values.metadata.turbo_namespace}}
