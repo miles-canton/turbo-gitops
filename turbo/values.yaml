@@ -5,3 +5,4 @@ metadata:
   registry: index.docker.io
   registryUsername: ""
   registryPassword: ""
+  tag: 8.7.1
