@@ -9,3 +9,4 @@ spec:
   name: t8c-certified
   source: certified-operators
   sourceNamespace: openshift-marketplace
+
