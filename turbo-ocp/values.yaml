@@ -12,5 +12,5 @@ metadata:
   # you can set the storageclass ,eg: ocs-storagecluster-cephfs
   db_persistence_size: 10Gi
   instana: true
-  kubeturbo: false
+
   

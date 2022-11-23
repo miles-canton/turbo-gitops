@@ -25,5 +25,4 @@ spec:
   {{- end }}
   instana:
     enabled: {{.Values.metadata.instana}}
-  kubeturbo:
-    enabled: {{.Values.metadata.kubeturbo}}
+
