@@ -4,6 +4,8 @@ metadata:
   labels:
     kubernetes.io/metadata.name: argocd
   name: turbonomic
+  annotations:
+    argocd.argoproj.io/hook: PreSync
 spec:
   finalizers:
   - kubernetes
