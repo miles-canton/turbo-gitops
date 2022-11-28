@@ -3,7 +3,7 @@ kind: Namespace
 metadata:
   labels:
     kubernetes.io/metadata.name: argocd
-  name: turbo
+  name: {{ .Release.Namespace }}
 spec:
   finalizers:
   - kubernetes
