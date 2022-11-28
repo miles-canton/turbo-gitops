@@ -3,7 +3,7 @@ kind: Namespace
 metadata:
   labels:
     kubernetes.io/metadata.name: argocd
-  name: turbonomic
+  name: {{.Values.metadata.turbo_namespace}}
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
 spec:
