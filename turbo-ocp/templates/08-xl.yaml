@@ -25,5 +25,5 @@ spec:
       size: {{.Values.metadata.db_persistence_size}}
   {{- end }}
   instana:
-    enabled: {{.Values.metadata.instana}}
+    enabled: {{.Values.metadata.instana.enable}}
 
