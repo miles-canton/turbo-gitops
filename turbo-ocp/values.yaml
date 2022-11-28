@@ -11,6 +11,6 @@ metadata:
   storageClassName: "ocs-storagecluster-cephfs"
   # you can set the storageclass ,eg: ocs-storagecluster-cephfs
   db_persistence_size: 50Gi
-  instana.enable: true
+  instana_enable: true
 
   
