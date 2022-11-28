@@ -52,7 +52,7 @@ metadata:
 subjects:
   - kind: ServiceAccount
     name: t8c-operator
-    namespace: turboserver
+    namespace: {{ .Release.Namespace }}
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
