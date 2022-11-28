@@ -6,7 +6,7 @@ subjects:
 - kind: ServiceAccount
   name: t8c-operator
   # Replace the following if Turbonomic is deployed in a different namespace
-  namespace: turbonomic
+  namespace: {{ .Release.Namespace }}
 roleRef:
   kind: ClusterRole
   name: t8c-operator
