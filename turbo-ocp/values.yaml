@@ -1,16 +1,16 @@
 ---
-repoURL: https://github.com/cloud-pak-gitops/turbo-gitops
+
 metadata:
   turbo_namespace: turbonomic
-  registry: ""
+  registry: "index.docker.io"
   registryUsername: ""
   registryPassword: ""
-  repository: ""
+  repository: "turbonomic"
   # default repository: registry.connect.redhat.com/turbonomic
   tag: 8.7.1
-  storageClassName: ""
+  storageClassName: "ocs-storagecluster-cephfs"
   # you can set the storageclass ,eg: ocs-storagecluster-cephfs
-  db_persistence_size: 10Gi
+  db_persistence_size: 50Gi
   instana: true
 
   
