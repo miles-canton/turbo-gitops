@@ -2,8 +2,11 @@ apiVersion: charts.helm.k8s.io/v1
 kind: Xl
 metadata:
   name: xl-release
-  namespace: {{.Values.metadata.turbo_namespace}}
-
+  namespace: {{ .Release.Namespace }}
+  labels:
+    kubernetes.io/metadata.name: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "100"
 spec:
   global:
     {{- if .Values.metadata.storageClassName }}
