@@ -7,7 +7,7 @@ metadata:
   # repository: "turbonomic"
   # default repository: registry.connect.redhat.com/turbonomic
   tag: 8.7.1
-  storageClassName: "ocs-storagecluster-cephfs"
+  storageClassName: ""
   # you can set the storageclass ,eg: ocs-storagecluster-cephfs
   db_persistence_size: 50Gi
   instana_enable: true

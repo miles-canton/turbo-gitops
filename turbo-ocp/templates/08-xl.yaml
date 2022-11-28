@@ -1,12 +1,11 @@
 apiVersion: charts.helm.k8s.io/v1
 kind: Xl
 metadata:
-  name: xl-release
-  namespace: {{ .Release.Namespace }}
-  labels:
-    kubernetes.io/metadata.name: argocd
   annotations:
     argocd.argoproj.io/sync-wave: "8"
+  name: xl-release
+  namespace: {{ .Release.Namespace }}
+
 spec:
   global:
     {{- if .Values.metadata.storageClassName }}
