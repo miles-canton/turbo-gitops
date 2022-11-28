@@ -2,10 +2,10 @@ apiVersion: operators.coreos.com/v1
 kind: OperatorGroup
 metadata:
   name: turbonomic-mkk5d
-  namespace: {{.Values.metadata.turbo_namespace}}
+  namespace: {{ .Release.Namespace }}
   annotations:
     argocd.argoproj.io/sync-wave: "6"
 spec:
   targetNamespaces:
-  - {{.Values.metadata.turbo_namespace}}
+  - {{ .Release.Namespace }}
   
