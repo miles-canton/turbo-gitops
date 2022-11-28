@@ -1,7 +1,6 @@
 ---
 
 metadata:
-  turbo_namespace: turbonomic
   registry: "index.docker.io"
   registryUsername: ""
   registryPassword: ""
