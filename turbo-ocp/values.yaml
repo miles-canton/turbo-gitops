@@ -12,5 +12,6 @@ metadata:
   db_persistence_size: 50Gi
   instana_enable: true
   kubeturbo_enable: true
+  administrator_password: Trubonomic
 
   
