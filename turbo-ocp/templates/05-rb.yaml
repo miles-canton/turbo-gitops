@@ -2,14 +2,14 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  name: system:openshift:scc:anyuid
+  name: 'system:openshift:scc:anyuid'
   namespace: {{ .Release.Namespace }}
   annotations:
     argocd.argoproj.io/sync-wave: '10'
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: system:openshift:scc:anyuid
+  name: 'system:openshift:scc:anyuid'
 subjects:
 - kind: ServiceAccount
   name: t8c-operator
@@ -18,14 +18,14 @@ subjects:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  name: system:openshift:scc:privileged
+  name: 'system:openshift:scc:privileged'
   namespace: {{ .Release.Namespace }}
   annotations:
     argocd.argoproj.io/sync-wave: '10'
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: system:openshift:scc:privileged
+  name: 'system:openshift:scc:privileged'
 subjects:
 - kind: ServiceAccount
   name: t8c-operator
@@ -34,7 +34,7 @@ subjects:
 kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-annotations:
+  annotations:
     argocd.argoproj.io/sync-wave: '10'
   name: 'system:openshift:scc:anyuid'
 subjects:
@@ -65,8 +65,6 @@ kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: turbo-all-binding
-  labels:
-    app.kubernetes.io/managed-by: Helm
   annotations:
     argocd.argoproj.io/sync-wave: '10'
     meta.helm.sh/release-name: xl-release
